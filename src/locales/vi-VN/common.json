@@ -29,7 +29,7 @@
     "toolbox": "Công cụ"
   },
   "donate": {
-    "button": "Ủng hộ",
+    "button": "Donate",
     "title": "Ủng hộ dự án",
     "intro": "Nếu ứng dụng miễn phí này hữu ích, sự ủng hộ của bạn sẽ giúp chúng tôi tiếp tục cải thiện. Chọn một hình thức bên dưới:",
     "method": {
@@ -49,7 +49,9 @@
     "copied": "Đã sao chép",
     "transferNote": "Nếu muốn nhận lời cảm ơn, bạn có thể để lại thông tin liên hệ trong nội dung chuyển khoản.",
     "networkNote": "Chỉ gửi USDT qua mạng ERC20 đến địa chỉ này.",
-    "close": "Đóng"
+    "close": "Đóng",
+    "scanQr": "Quét mã QR này để donate.",
+    "qrAlt": "Mã QR donate qua {method}"
   },
   "tray": {
     "show": "Hiện cửa sổ",

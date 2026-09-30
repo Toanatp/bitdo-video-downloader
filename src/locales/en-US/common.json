@@ -50,7 +50,9 @@
     "copied": "Copied",
     "transferNote": "Optional: leave your contact details in the transfer message if you would like a thank-you note.",
     "networkNote": "Only send USDT on the ERC20 network to this address.",
-    "close": "Close"
+    "close": "Close",
+    "scanQr": "Scan this QR code to donate.",
+    "qrAlt": "{method} donation QR code"
   },
   "tray": {
     "show": "Show Window",

@@ -70,6 +70,14 @@ onUnmounted(() => {
         <img :src="selectedMethod.icon" alt="" class="method-icon" />
         <strong>{{ t(selectedMethod.titleKey) }}</strong>
       </div>
+      <div class="qr-panel">
+        <img
+          :src="selectedMethod.qr"
+          :alt="t('donate.qrAlt', { method: t(selectedMethod.titleKey) })"
+          class="qr-image"
+        />
+        <n-text depth="3" class="qr-caption">{{ t("donate.scanQr") }}</n-text>
+      </div>
       <div v-for="detail in selectedMethod.details" :key="detail.labelKey" class="detail-row">
         <n-text depth="3" class="detail-label">{{ t(detail.labelKey) }}</n-text>
         <div class="detail-value">
@@ -138,6 +146,30 @@ onUnmounted(() => {
   width: 34px;
   height: 34px;
   flex: none;
+}
+
+.qr-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 14px;
+  border: 1px solid var(--n-border-color);
+  border-radius: 14px;
+  background: rgb(255 255 255 / 4%);
+}
+
+.qr-image {
+  width: min(220px, 68vw);
+  height: min(220px, 68vw);
+  object-fit: contain;
+  border-radius: 12px;
+  background: #fff;
+  padding: 10px;
+}
+
+.qr-caption {
+  font-size: 12px;
 }
 
 .detail-row {
