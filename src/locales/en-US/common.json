@@ -29,6 +29,29 @@
     "downloads": "Downloads",
     "toolbox": "Tools"
   },
+  "donate": {
+    "button": "Donate",
+    "title": "Support this project",
+    "intro": "If this free app helps you, your support helps us keep improving it. Choose a method below:",
+    "method": {
+      "bank": "MB Bank",
+      "momo": "MoMo",
+      "paypal": "PayPal",
+      "usdt": "USDT"
+    },
+    "bank": "Bank",
+    "accountName": "Account name",
+    "accountNumber": "Account number",
+    "phone": "Phone number",
+    "email": "PayPal email",
+    "network": "Network",
+    "wallet": "Wallet address",
+    "copyValue": "Copy {label}",
+    "copied": "Copied",
+    "transferNote": "Optional: leave your contact details in the transfer message if you would like a thank-you note.",
+    "networkNote": "Only send USDT on the ERC20 network to this address.",
+    "close": "Close"
+  },
   "tray": {
     "show": "Show Window",
     "quit": "Quit",

@@ -28,6 +28,29 @@
     "downloads": "Tải xuống",
     "toolbox": "Công cụ"
   },
+  "donate": {
+    "button": "Ủng hộ",
+    "title": "Ủng hộ dự án",
+    "intro": "Nếu ứng dụng miễn phí này hữu ích, sự ủng hộ của bạn sẽ giúp chúng tôi tiếp tục cải thiện. Chọn một hình thức bên dưới:",
+    "method": {
+      "bank": "MB Bank",
+      "momo": "MoMo",
+      "paypal": "PayPal",
+      "usdt": "USDT"
+    },
+    "bank": "Ngân hàng",
+    "accountName": "Tên chủ tài khoản",
+    "accountNumber": "Số tài khoản",
+    "phone": "Số điện thoại",
+    "email": "Email PayPal",
+    "network": "Mạng",
+    "wallet": "Địa chỉ ví",
+    "copyValue": "Sao chép {label}",
+    "copied": "Đã sao chép",
+    "transferNote": "Nếu muốn nhận lời cảm ơn, bạn có thể để lại thông tin liên hệ trong nội dung chuyển khoản.",
+    "networkNote": "Chỉ gửi USDT qua mạng ERC20 đến địa chỉ này.",
+    "close": "Đóng"
+  },
   "tray": {
     "show": "Hiện cửa sổ",
     "quit": "Thoát",

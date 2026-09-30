@@ -21,6 +21,7 @@ const settingStore = useSettingStore();
 const downloadStore = useDownloadStore();
 const pendingStore = usePendingStore();
 const themeVars = useThemeVars();
+const showDonateModal = ref(false);
 
 const { bootstrap } = useAppBootstrap();
 const { setupTray, handleQuitRequest } = useTrayManager();
@@ -89,6 +90,7 @@ onMounted(async () => {
     <UpdateModal />
     <SetupModal />
     <MigrationModal />
+    <DonateModal v-model:show="showDonateModal" />
     <n-layout style="height: 100vh">
       <n-layout-header bordered class="app-header">
         <div class="header-side">
@@ -134,13 +136,13 @@ onMounted(async () => {
             :focusable="false"
             quaternary
             circle
-            tag="a"
-            href="https://github.com/imsyy/yt-dlp-gui"
-            target="_blank"
+            :aria-label="$t('donate.button')"
+            :title="$t('donate.button')"
+            @click="showDonateModal = true"
           >
             <template #icon>
               <n-icon>
-                <icon-mdi-github />
+                <icon-mdi-heart-outline />
               </n-icon>
             </template>
           </n-button>
