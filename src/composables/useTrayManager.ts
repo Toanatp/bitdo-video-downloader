@@ -37,7 +37,7 @@ export const useTrayManager = () => {
     try {
       await invoke("set_tray_visible", { visible: settingStore.showTrayIcon });
     } catch (error) {
-      console.error("[YDL GUI] failed to update tray visibility:", error);
+      console.error("[Bitdo Downloader] failed to update tray visibility:", error);
     }
   };
 

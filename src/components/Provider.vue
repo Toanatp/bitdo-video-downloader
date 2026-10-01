@@ -82,7 +82,7 @@ const syncNativeTheme = async (): Promise<void> => {
       settingStore.themeMode === "auto" ? null : settingStore.themeMode,
     );
   } catch (error) {
-    console.warn("[YDL GUI] failed to sync native window theme:", error);
+    console.warn("[Bitdo Downloader] failed to sync native window theme:", error);
   }
 };
 

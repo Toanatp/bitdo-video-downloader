@@ -1,14 +1,16 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "yt-dlp-gui",
+  "name": "bitdo-video-downloader",
   "private": true,
   "version": "1.0.0",
-  "description": "A modern, cross-platform desktop GUI for yt-dlp — download videos from YouTube, Bilibili, Twitter and 1000+ sites. Built with Tauri 2 + Vue 3.",
+  "description": "Free Bitdo Downloader desktop app for downloading videos from YouTube, Bilibili, TikTok, Facebook, Instagram, X/Twitter and 1000+ sites. Built with Tauri 2 + Vue 3.",
   "keywords": [
+    "bitdo-downloader",
+    "bitdo",
+    "video-downloader",
     "yt-dlp",
     "yt-dlp-gui",
     "youtube-downloader",
-    "video-downloader",
     "tauri",
     "vue",
     "desktop-app",
@@ -18,17 +20,17 @@
     "gui"
   ],
   "author": {
-    "name": "imsyy",
-    "url": "https://github.com/imsyy"
+    "name": "Bitdo",
+    "url": "https://github.com/Toanatp"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/imsyy/yt-dlp-gui"
+    "url": "https://github.com/Toanatp/bitdo-video-downloader"
   },
-  "homepage": "https://github.com/imsyy/yt-dlp-gui#readme",
+  "homepage": "https://github.com/Toanatp/bitdo-video-downloader#readme",
   "bugs": {
-    "url": "https://github.com/imsyy/yt-dlp-gui/issues"
+    "url": "https://github.com/Toanatp/bitdo-video-downloader/issues"
   },
   "engines": {
     "node": ">=22"

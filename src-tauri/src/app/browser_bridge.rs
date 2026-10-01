@@ -168,7 +168,7 @@ async fn persist_import(
 
     let mut lines = Vec::with_capacity(payload.cookies.len() + 2);
     lines.push("# Netscape HTTP Cookie File".to_string());
-    lines.push("# Generated locally by YDL GUI Browser Extension".to_string());
+    lines.push("# Generated locally by Bitdo Downloader Browser Extension".to_string());
     let mut seen = HashSet::new();
     for cookie in payload.cookies {
         validate_field(&cookie.domain)?;

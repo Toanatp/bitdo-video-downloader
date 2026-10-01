@@ -33,7 +33,7 @@ async fn fetch_latest_release_tag(tool: &str) -> Result<String, String> {
         .ok_or_else(|| format!("err_unknown_tool:{}", tool))?;
     let client = reqwest::Client::builder()
         .timeout(UPDATE_CHECK_TIMEOUT)
-        .user_agent(concat!("yt-dlp-gui/", env!("CARGO_PKG_VERSION")))
+        .user_agent(concat!("bitdo-video-downloader/", env!("CARGO_PKG_VERSION")))
         .build()
         .map_err(|e| format!("err_create_http_client:{}", e))?;
     let response = client

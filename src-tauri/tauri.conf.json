@@ -1,18 +1,18 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "YDL GUI",
+  "productName": "Bitdo Downloader",
   "version": "1.0.0",
-  "identifier": "com.imsyy.yt-dlp-gui",
+  "identifier": "com.shopbitdo.downloader",
   "build": {
     "beforeDevCommand": "pnpm dev",
     "devUrl": "http://localhost:15688",
-    "beforeBuildCommand": "pnpm build",
+    "beforeBuildCommand": "npm run build",
     "frontendDist": "../dist"
   },
   "app": {
     "windows": [
       {
-        "title": "YDL GUI",
+        "title": "Bitdo Downloader",
         "width": 800,
         "height": 600,
         "minWidth": 800,
@@ -26,7 +26,7 @@
     "trayIcon": {
       "iconPath": "icons/icon.png",
       "iconAsTemplate": true,
-      "tooltip": "YDL GUI"
+      "tooltip": "Bitdo Downloader"
     }
   },
   "bundle": {
@@ -47,12 +47,14 @@
   "plugins": {
     "deep-link": {
       "desktop": {
-        "schemes": ["ytdlp-gui"]
+        "schemes": [
+          "bitdo-downloader"
+        ]
       }
     },
     "updater": {
       "endpoints": [
-        "https://github.com/imsyy/yt-dlp-gui/releases/latest/download/latest.json"
+        "https://github.com/Toanatp/bitdo-video-downloader/releases/latest/download/latest.json"
       ],
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEJENzM3NUZDRDIzNDM3MzcKUldRM056VFMvSFZ6dldFQXBCT0JXcmNLRHRmd0tKNE1ucEFnWTl2WHZOcHFSZ205QnFFNjRibUMK",
       "windows": {

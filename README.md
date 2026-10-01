@@ -1,17 +1,17 @@
 <div align="center">
 
-<img src="./public/app-icon.svg" width="80" height="80" alt="yt-dlp GUI">
+<img src="./public/app-icon.svg" width="80" height="80" alt="Bitdo Downloader">
 
-# yt-dlp GUI
+# Bitdo Downloader
 
 A modern, beautiful desktop GUI for [yt-dlp](https://github.com/yt-dlp/yt-dlp).
 
 Download videos from YouTube, Bilibili, Twitter/X and [1000+ websites](https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md) with ease.
 
-[![License](https://img.shields.io/github/license/imsyy/yt-dlp-gui?color=f0f0f0&labelColor=555555)](LICENSE)
-[![Release](https://img.shields.io/github/v/release/imsyy/yt-dlp-gui?color=f0f0f0&labelColor=555555)](https://github.com/imsyy/yt-dlp-gui/releases)
-[![Stars](https://img.shields.io/github/stars/imsyy/yt-dlp-gui?style=flat&color=f0f0f0&labelColor=555555)](https://github.com/imsyy/yt-dlp-gui)
-[![Downloads](https://img.shields.io/github/downloads/imsyy/yt-dlp-gui/total?color=f0f0f0&labelColor=555555)](https://github.com/imsyy/yt-dlp-gui/releases)
+[![License](https://img.shields.io/github/license/Toanatp/bitdo-video-downloader?color=f0f0f0&labelColor=555555)](LICENSE)
+[![Release](https://img.shields.io/github/v/release/Toanatp/bitdo-video-downloader?color=f0f0f0&labelColor=555555)](https://github.com/Toanatp/bitdo-video-downloader/releases)
+[![Stars](https://img.shields.io/github/stars/Toanatp/bitdo-video-downloader?style=flat&color=f0f0f0&labelColor=555555)](https://github.com/Toanatp/bitdo-video-downloader)
+[![Downloads](https://img.shields.io/github/downloads/Toanatp/bitdo-video-downloader/total?color=f0f0f0&labelColor=555555)](https://github.com/Toanatp/bitdo-video-downloader/releases)
 
 **English** | [简体中文](./README.zh-CN.md)
 
@@ -78,7 +78,7 @@ yt-dlp is powerful, but its command-line interface can be intimidating. **yt-dlp
 
 ### Download
 
-Grab the latest release for your platform from [**Releases**](https://github.com/imsyy/yt-dlp-gui/releases):
+Grab the latest release for your platform from [**Releases**](https://github.com/Toanatp/bitdo-video-downloader/releases):
 
 | Platform | File |
 |----------|------|
@@ -111,10 +111,10 @@ If FUSE cannot be enabled in your environment, run the same file with `--appimag
 
 ### Command-line automation
 
-An installed YDL GUI instance can be opened from scripts with session-specific inputs:
+An installed Bitdo Downloader instance can be opened from scripts with session-specific inputs:
 
 ```bash
-yt-dlp-gui --url "https://example.com/video" \
+bitdo-video-downloader --url "https://example.com/video" \
   --cookies "/path/to/cookies.txt" \
   --dir "/path/to/downloads" \
   --yt-dlp-path "/path/to/yt-dlp" \
@@ -125,11 +125,11 @@ yt-dlp-gui --url "https://example.com/video" \
 
 ## Browser Extension
 
-A companion **YDL GUI Helper** browser extension lives in [`browser-extension/`](./browser-extension/). It sends the current tab's URL and required cookies straight to the desktop app via a local protocol handler (`ytdlp-gui://`) — no copy-paste, no extra cookie export.
+A companion **Bitdo Downloader Helper** browser extension lives in [`browser-extension/`](./browser-extension/). It sends the current tab's URL and required cookies straight to the desktop app via a local protocol handler (`bitdo-downloader://`) — no copy-paste, no extra cookie export.
 
 ### Highlights
 
-- One-click send from the popup, or right-click context menu (`Send page to YDL GUI` / `Download link with YDL GUI` / `Send selected URL to YDL GUI`)
+- One-click send from the popup, or right-click context menu (`Send page to Bitdo Downloader` / `Download link with Bitdo Downloader` / `Send selected URL to Bitdo Downloader`)
 - Action badge lights up automatically on supported video sites
 - Auto light / dark theme that follows your system
 - Cookies are processed locally — passed straight to the app via the local protocol, never uploaded anywhere
@@ -141,16 +141,16 @@ The extension is bundled with the app — no separate download required.
 1. In the app, open **Toolbox → Browser Extension** and click **Open extension folder**.
 2. Open `chrome://extensions` (or `edge://extensions`) and turn on **Developer mode** in the top-right.
 3. Click **Load unpacked** and select the folder revealed in step 1.
-4. Pin the YDL GUI Helper icon next to the address bar.
+4. Pin the Bitdo Downloader Helper icon next to the address bar.
 
 ### Use
 
 1. Open a supported video page (YouTube, Bilibili, Twitch, Vimeo, Twitter/X, TikTok, Instagram, Facebook, Reddit, SoundCloud, etc.).
-2. Click the YDL GUI icon, or right-click the page / a video link and choose **Send to YDL GUI**.
+2. Click the Bitdo Downloader icon, or right-click the page / a video link and choose **Send to Bitdo Downloader**.
 3. The desktop app comes to the front automatically with the URL and cookies pre-filled.
 
 > [!NOTE]
-> Make sure the YDL GUI desktop app is installed and running for the protocol handler to fire.
+> Make sure the Bitdo Downloader desktop app is installed and running for the protocol handler to fire.
 
 ## Tech Stack
 
@@ -175,8 +175,8 @@ The extension is bundled with the app — no separate download required.
 
 ```bash
 # Clone the repository
-git clone https://github.com/imsyy/yt-dlp-gui.git
-cd yt-dlp-gui
+git clone https://github.com/Toanatp/bitdo-video-downloader.git
+cd bitdo-video-downloader
 
 # Install dependencies
 pnpm install
@@ -190,8 +190,13 @@ pnpm tauri:build
 
 ## Contributing
 
-Contributions are welcome! Feel free to open an [issue](https://github.com/imsyy/yt-dlp-gui/issues) or submit a pull request.
+Contributions are welcome! Feel free to open an [issue](https://github.com/Toanatp/bitdo-video-downloader/issues) or submit a pull request.
 
 ## License
 
 [MIT](LICENSE) &copy; [imsyy](https://github.com/imsyy)
+
+
+## Attribution
+
+Bitdo Downloader is based on the MIT-licensed upstream project by [imsyy](https://github.com/imsyy/yt-dlp-gui). The original LICENSE is preserved in this repository.

@@ -8,7 +8,7 @@ import type { BrowserExtensionImport, CliOpenRequest, HomeMode } from "@/types";
 /**
  * 集中管理应用外部导入能力的 Composable：
  * 1. 浏览器扩展导入（Local HTTP Bridge）
- * 2. 深度链接唤醒（Deep Link: ytdlp-gui://）
+ * 2. 深度链接唤醒（Deep Link: bitdo-downloader://）
  * 3. 命令行参数导入（CLI Arguments）
  *
  * @returns 包含监听器初始化及各导入处理方法的对象
@@ -21,7 +21,7 @@ export const useExternalImports = () => {
   let lastDeepLinkTimestamp = 0;
 
   /**
-   * 处理深链接唤醒 URL（如 ytdlp-gui://download?url=...&mode=batch）
+   * 处理深链接唤醒 URL（如 bitdo-downloader://download?url=...&mode=batch）
    *
    * @param rawDeepLinkUrl 操作系统传入的原始协议 URL 字符串
    */
@@ -83,7 +83,7 @@ export const useExternalImports = () => {
    * @param importedData 浏览器插件导入的数据载荷
    */
   const handleBrowserExtensionImport = (importedData: BrowserExtensionImport): void => {
-    console.log("[YDL GUI] browser extension import received:", importedData);
+    console.log("[Bitdo Downloader] browser extension import received:", importedData);
     if (importedData.cookieFile) {
       settingStore.cookieFile = importedData.cookieFile;
       settingStore.cookieMode = "file";
@@ -132,7 +132,7 @@ export const useExternalImports = () => {
         handleBrowserExtensionImport(importItem);
       }
     } catch (error) {
-      console.error("[YDL GUI] failed to consume browser extension imports:", error);
+      console.error("[Bitdo Downloader] failed to consume browser extension imports:", error);
     }
   };
 
@@ -160,7 +160,7 @@ export const useExternalImports = () => {
         handleCliOpenRequest(initialCliRequest);
       }
     } catch (error) {
-      console.error("[YDL GUI] failed to take initial CLI request:", error);
+      console.error("[Bitdo Downloader] failed to take initial CLI request:", error);
     }
 
     // 4. 读取冷启动深度链接

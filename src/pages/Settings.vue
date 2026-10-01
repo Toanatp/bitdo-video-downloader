@@ -279,7 +279,7 @@ watch(
             <n-button
               text
               tag="a"
-              href="https://github.com/imsyy/yt-dlp-gui"
+              href="https://github.com/Toanatp/bitdo-video-downloader"
               target="_blank"
               size="tiny"
             >

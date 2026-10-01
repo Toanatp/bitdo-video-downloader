@@ -11,7 +11,7 @@ import { trimTaskLogs } from "@/utils/logs";
 
 /** 老版本 IndexedDB 实例定位 */
 const legacyTasksStorage = localforage.createInstance({
-  name: "yt-dlp-gui",
+  name: "bitdo-video-downloader",
   storeName: "downloads",
 });
 

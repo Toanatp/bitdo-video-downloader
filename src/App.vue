@@ -97,7 +97,7 @@ onMounted(async () => {
           <div class="logo" @click="router.push({ name: 'home' })">
             <img src="/app-icon.svg" alt="" class="logo-img" />
             <div class="logo-titles">
-              <span class="logo-text">YDL GUI</span>
+              <span class="logo-text">Bitdo Downloader</span>
               <n-text v-if="appVersion" depth="3" class="logo-version">v{{ appVersion }}</n-text>
             </div>
           </div>

@@ -34,7 +34,7 @@ pub fn run() {
             }
             // 将深链接 URL 转发到前端
             for arg in &args {
-                if arg.starts_with("ytdlp-gui://") {
+                if arg.starts_with("bitdo-downloader://") {
                     let _ = app.emit("deep-link-url", arg.clone());
                 }
             }
