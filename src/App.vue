@@ -95,7 +95,7 @@ onMounted(async () => {
       <n-layout-header bordered class="app-header">
         <div class="header-side">
           <div class="logo" @click="router.push({ name: 'home' })">
-            <img src="/app-icon.svg" alt="" class="logo-img" />
+            <img src="/app-logo.png" alt="" class="logo-img" />
             <div class="logo-titles">
               <span class="logo-text">Bitdo Downloader</span>
               <n-text v-if="appVersion" depth="3" class="logo-version">v{{ appVersion }}</n-text>
@@ -250,8 +250,9 @@ onMounted(async () => {
     cursor: pointer;
 
     .logo-img {
-      width: 26px;
-      height: 26px;
+      width: 28px;
+      height: 28px;
+      border-radius: 7px;
       transition: transform 0.3s;
     }
 

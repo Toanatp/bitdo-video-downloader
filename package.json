@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/package.json",
   "name": "bitdo-video-downloader",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Free Bitdo Downloader desktop app for downloading videos from YouTube, Bilibili, TikTok, Facebook, Instagram, X/Twitter and 1000+ sites. Built with Tauri 2 + Vue 3.",
   "keywords": [
     "bitdo-downloader",
@@ -48,7 +48,8 @@
     "test:watch": "vitest",
     "lint": "eslint src/",
     "lint:fix": "eslint src/ --fix",
-    "format": "prettier --write \"src/**/*.{vue,ts,js,scss,css,json}\""
+    "format": "prettier --write \"src/**/*.{vue,ts,js,scss,css,json}\"",
+    "release:updater-json": "node scripts/generate-tauri-latest-json.mjs"
   },
   "dependencies": {
     "@tauri-apps/api": "^2.11.0",

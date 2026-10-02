@@ -89,7 +89,7 @@ jobs:
           tagName: ${{ github.ref_name }}
           releaseName: "${{ github.ref_name }}"
           releaseBody: ${{ steps.release_notes.outputs.notes }}
-          releaseDraft: true
+          releaseDraft: false
           prerelease: false
           generateReleaseNotes: false
           includeUpdaterJson: true

@@ -8,6 +8,8 @@ import IconMdiCommentTextMultipleOutline from "~icons/mdi/comment-text-multiple-
 import IconMdiAccountBoxMultipleOutline from "~icons/mdi/account-box-multiple-outline";
 import IconMdiPuzzleOutline from "~icons/mdi/puzzle-outline";
 import IconMdiOpenInApp from "~icons/mdi/open-in-app";
+import IconMdiMovieEditOutline from "~icons/mdi/movie-edit-outline";
+import { openUrl } from "@tauri-apps/plugin-opener";
 import { useI18n } from "vue-i18n";
 
 useI18n();
@@ -18,9 +20,12 @@ interface ToolItem {
   icon: Component;
   color: string;
   bg: string;
-  titleKey: string;
-  descKey: string;
+  titleKey?: string;
+  descKey?: string;
+  title?: string;
+  desc?: string;
   tagKey?: string;
+  externalUrl?: string;
 }
 
 const tools: ToolItem[] = [
@@ -82,6 +87,25 @@ const tools: ToolItem[] = [
     titleKey: "plugins.title",
     descKey: "plugins.desc",
   },
+
+  {
+    key: "capcut-automate",
+    icon: IconMdiMovieEditOutline,
+    color: "#00d4aa",
+    bg: "rgba(0,212,170,0.12)",
+    title: "Capcut Automate",
+    desc: "Tự động hóa edit CapCut PC: đồng bộ video với audio, thêm chuyển cảnh, hiệu ứng và nhiều thao tác lặp lại.",
+    externalUrl: "https://capcutpilot.com/download",
+  },
+  {
+    key: "create-subtitles",
+    icon: IconMdiSubtitlesOutline,
+    color: "#f97316",
+    bg: "rgba(249,115,22,0.12)",
+    title: "Create Subtitles",
+    desc: "Công cụ tạo phụ đề chất lượng cao, chuẩn chính tả, phù hợp cho video dài và nội dung đa nền tảng.",
+    externalUrl: "https://shopbitdo.com/product/smartsub-editor",
+  },
   {
     key: "browser-extension",
     icon: IconMdiOpenInApp,
@@ -93,7 +117,12 @@ const tools: ToolItem[] = [
   },
 ];
 
-const handleToolClick = (tool: ToolItem) => {
+const handleToolClick = async (tool: ToolItem) => {
+  if (tool.externalUrl) {
+    await openUrl(tool.externalUrl);
+    return;
+  }
+
   router.push({ name: `toolbox-${tool.key}` });
 };
 </script>
@@ -117,12 +146,12 @@ const handleToolClick = (tool: ToolItem) => {
           </div>
           <n-flex vertical :size="2" class="tool-info">
             <n-flex align="center" :size="6" :wrap="false">
-              <n-text strong class="tool-title">{{ $t(tool.titleKey) }}</n-text>
+              <n-text strong class="tool-title">{{ tool.title ?? $t(tool.titleKey ?? "") }}</n-text>
               <n-tag v-if="tool.tagKey" size="small" round :bordered="false" type="warning">
                 {{ $t(tool.tagKey) }}
               </n-tag>
             </n-flex>
-            <n-text depth="3" class="tool-desc">{{ $t(tool.descKey) }}</n-text>
+            <n-text depth="3" class="tool-desc">{{ tool.desc ?? $t(tool.descKey ?? "") }}</n-text>
           </n-flex>
           <n-icon :size="16" class="tool-arrow" :depth="3">
             <icon-mdi-chevron-right />

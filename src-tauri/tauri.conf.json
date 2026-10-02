@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
   "productName": "Bitdo Downloader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "identifier": "com.shopbitdo.downloader",
   "build": {
     "beforeDevCommand": "pnpm dev",
@@ -25,7 +25,7 @@
     },
     "trayIcon": {
       "iconPath": "icons/icon.png",
-      "iconAsTemplate": true,
+      "iconAsTemplate": false,
       "tooltip": "Bitdo Downloader"
     }
   },
@@ -56,7 +56,7 @@
       "endpoints": [
         "https://github.com/Toanatp/bitdo-video-downloader/releases/latest/download/latest.json"
       ],
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEJENzM3NUZDRDIzNDM3MzcKUldRM056VFMvSFZ6dldFQXBCT0JXcmNLRHRmd0tKNE1ucEFnWTl2WHZOcHFSZ205QnFFNjRibUMK",
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDM2QTc3MUJCNEEyQTFFRjIKUldUeUhpcEt1M0duTm5FajZ3K0d1OWFqSWpjNmI4RDVyaUJpZzRxaGxTc2JkalIyYTFUdm9jc3gK",
       "windows": {
         "installMode": "passive"
       }
