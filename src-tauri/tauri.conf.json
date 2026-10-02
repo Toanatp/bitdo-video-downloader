@@ -1,10 +1,10 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
   "productName": "Bitdo Downloader",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "identifier": "com.shopbitdo.downloader",
   "build": {
-    "beforeDevCommand": "pnpm dev",
+    "beforeDevCommand": "npm run dev",
     "devUrl": "http://localhost:15688",
     "beforeBuildCommand": "npm run build",
     "frontendDist": "../dist"

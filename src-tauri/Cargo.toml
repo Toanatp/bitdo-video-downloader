@@ -1,9 +1,10 @@
 [package]
 name = "bitdo-video-downloader"
-version = "1.0.2"
+version = "1.0.1"
 description = "Free Bitdo Downloader desktop app for yt-dlp"
 authors = ["Bitdo", "imsyy"]
 edition = "2021"
+default-run = "bitdo-video-downloader"
 
 [lib]
 # The `_lib` suffix may seem redundant but it is necessary

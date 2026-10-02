@@ -321,6 +321,36 @@ onUnmounted(() => {
         </n-popover>
       </n-flex>
       <n-flex align="center" :size="12" :wrap="false">
+        <n-tooltip v-if="statusStore.appUpdateAvailable" trigger="hover">
+          <template #trigger>
+            <n-button
+              text
+              size="tiny"
+              :focusable="false"
+              class="app-update-trigger"
+              :aria-label="$t('settings.updateAvailable')"
+              @click="statusStore.showUpdateModal = true"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#e3e3e3"
+                aria-hidden="true"
+                class="app-update-icon"
+              >
+                <path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+              </svg>
+            </n-button>
+          </template>
+          Update available
+        </n-tooltip>
+        <n-divider
+          v-if="statusStore.appUpdateAvailable"
+          vertical
+          class="status-divider"
+        />
         <n-tooltip trigger="hover">
           <template #trigger>
             <n-button
@@ -425,6 +455,45 @@ onUnmounted(() => {
 .tool-trigger {
   width: 24px;
   height: 24px;
+}
+
+.app-update-trigger {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #18a058;
+  box-shadow: 0 0 0 0 rgba(24, 160, 88, 0.45);
+  animation: update-pulse 1.8s ease-out infinite;
+
+  &:hover {
+    background: #36ad6a;
+  }
+
+  :deep(.n-button__content) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.app-update-icon {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+@keyframes update-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(24, 160, 88, 0.45);
+  }
+
+  70% {
+    box-shadow: 0 0 0 7px rgba(24, 160, 88, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(24, 160, 88, 0);
+  }
 }
 
 .status-divider {

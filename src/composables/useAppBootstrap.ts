@@ -44,9 +44,10 @@ export const useAppBootstrap = () => {
     try {
       const updateResult = await checkForAppUpdate();
       if (updateResult) {
-        statusStore.updateVersion = updateResult.version;
-        statusStore.updateNotes = updateResult.body || "";
+        statusStore.setAppUpdate(updateResult.version, updateResult.body || "");
         statusStore.showUpdateModal = true;
+      } else {
+        statusStore.clearAppUpdate();
       }
     } catch {
       // 静默失败，不打扰用户正常使用

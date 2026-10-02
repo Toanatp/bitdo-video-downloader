@@ -37,6 +37,7 @@ const handleUpdate = async () => {
       }
     });
 
+    statusStore.clearAppUpdate();
     window.$message.success(t("settings.appUpdateSuccess"));
     await relaunch();
   } catch (e: unknown) {

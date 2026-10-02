@@ -64,10 +64,10 @@ const handleCheckAppUpdate = async () => {
   try {
     const update = await check();
     if (update) {
-      statusStore.updateVersion = update.version;
-      statusStore.updateNotes = update.body || "";
+      statusStore.setAppUpdate(update.version, update.body || "");
       statusStore.showUpdateModal = true;
     } else {
+      statusStore.clearAppUpdate();
       window.$message.success(t("settings.appIsLatest"));
     }
   } catch (e: unknown) {

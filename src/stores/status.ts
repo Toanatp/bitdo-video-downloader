@@ -12,6 +12,17 @@ export const useStatusStore = defineStore("status", () => {
   const showUpdateModal = ref(false);
   const updateVersion = ref("");
   const updateNotes = ref("");
+  const appUpdateAvailable = computed(() => updateVersion.value.trim().length > 0);
+
+  const setAppUpdate = (version: string, notes = "") => {
+    updateVersion.value = version;
+    updateNotes.value = notes;
+  };
+
+  const clearAppUpdate = () => {
+    updateVersion.value = "";
+    updateNotes.value = "";
+  };
 
   /** yt-dlp 未安装弹窗 */
   const showYtdlpSetupModal = ref(false);
@@ -37,6 +48,9 @@ export const useStatusStore = defineStore("status", () => {
     showUpdateModal,
     updateVersion,
     updateNotes,
+    appUpdateAvailable,
+    setAppUpdate,
+    clearAppUpdate,
     showYtdlpSetupModal,
     showDenoSetupModal,
     showFfmpegSetupModal,
