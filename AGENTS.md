@@ -17,6 +17,10 @@ cargo check --manifest-path src-tauri/Cargo.toml
 cargo test --manifest-path src-tauri/Cargo.toml
 ```
 
+For Windows release builds, use `npm run tauri:build`. It runs the local signed-build pipeline and signs generated `.exe`, `.msi`, and `.dll` artifacts with the shopbitdo Authenticode certificate. Use `npm run tauri:build:raw` only when explicitly debugging unsigned Tauri build output.
+
+When changing build, release, installer, or GitHub Release tasks, read `.codex/skills/shopbitdo-build-signing/SKILL.md` and preserve the signing flow.
+
 Run focused checks while developing, then run the relevant frontend and Rust checks before handing off changes.
 
 ## Frontend Conventions

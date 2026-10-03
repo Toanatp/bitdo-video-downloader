@@ -1,0 +1,9 @@
+{
+    "rootSubject":  "CN=shopbitdo Internal Root CA",
+    "rootThumbprint":  "CF0BEEA5C77233A3F969E50680C6BE812C41F3CB",
+    "codeSigningSubject":  "CN=shopbitdo",
+    "codeSigningIssuer":  "CN=shopbitdo Internal Root CA",
+    "codeSigningThumbprint":  "8B384719EC81214CBCE29370E706DC4CB05FD3BE",
+    "generatedAt":  "2026-10-03T01:57:29.8197622Z",
+    "publicCertificateOnly":  true
+}

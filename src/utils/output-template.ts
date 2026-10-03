@@ -1,4 +1,4 @@
-export const DEFAULT_OUTPUT_TEMPLATE = "%(title).200s [%(id)s].%(ext)s";
+export const DEFAULT_OUTPUT_TEMPLATE = "%(title).80S [%(id)s].%(ext)s";
 
 /** 扩展名后缀：最终传给 yt-dlp 的模板必须恰好以它结尾。 */
 export const EXT_SUFFIX = ".%(ext)s";

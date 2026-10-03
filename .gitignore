@@ -33,3 +33,12 @@ dist-ssr
 ~
 *.key
 *.key.pub
+
+# Windows Authenticode signing secrets
+certificates/
+*.pfx
+*.p12
+*.pvk
+*.spc
+*.password.dpapi.txt
+*.password.txt

@@ -89,6 +89,11 @@ pub(super) fn build_download_args(
         // 进度输出间隔，避免高频刷屏
         "--progress-delta".to_string(),
         "1".to_string(),
+        // Windows is sensitive to long paths and some extracted titles can contain
+        // hundreds of characters. Keep the final generated filename short enough
+        // even when a persisted/custom frontend template still uses a long title.
+        "--trim-filenames".to_string(),
+        "120".to_string(),
     ];
 
     // JS 运行时（Deno）
@@ -114,7 +119,7 @@ pub(super) fn build_download_args(
         .output_template
         .as_deref()
         .filter(|s| !s.is_empty())
-        .unwrap_or("%(title).200s.%(ext)s");
+        .unwrap_or("%(title).80S [%(id)s].%(ext)s");
     let output_template = std::path::PathBuf::from(&params.download_dir)
         .join(template)
         .to_string_lossy()
